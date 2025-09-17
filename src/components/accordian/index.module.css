@@ -1,0 +1,50 @@
+:root {
+  --accordian-border: 1px solid #ccc;
+  --accordian-padding: 10px;
+  --accordian-border-radius: 5px;
+}
+
+.accordion_container {
+  border: var(--accordian-border);
+  border-radius: var(--accordian-border-radius);
+}
+
+.accordion_header {
+  border-bottom: var(--accordian-border);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  padding: var(--accordian-padding);
+}
+.accordion_header:first-child {
+  border-top-left-radius: var(--accordian-border-radius);
+  border-top-right-radius: var(--accordian-border-radius);
+}
+.accordion_header:hover {
+  background-color: #f2f7ff;
+}
+.accordion_header_open {
+  color: #0c63e4;
+  background-color: #e7f1ff;
+}
+
+.accordion_content {
+  border-bottom: var(--accordian-border);
+  padding: var(--accordian-padding);
+}
+
+.accordion_header:last-child,
+.accordion_content:last-child {
+  border-bottom: none;
+}
+
+.arrow {
+  margin-right: 8px;
+  transition: transform 0.3s ease-out;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
