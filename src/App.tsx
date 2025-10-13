@@ -1,11 +1,7 @@
-import AccordionExample from "./examples/Accordion";
+import "./pollyfill/bind.js";
 
 function App() {
-  return (
-    <div>
-      <AccordionExample />
-    </div>
-  );
+  return <div>React</div>;
 }
 
 export default App;
