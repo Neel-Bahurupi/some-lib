@@ -1,9 +1,22 @@
+declare global {
+  interface Function {
+    myBind(thisContext: any, ...bindArgs: any[]): any;
+    customBind(thisContext: any, ...bindArgs: any[]): any;
+  }
+}
+
 // Using apply
 
 if (!Function.prototype.myBind) {
   Function.prototype.myBind = function (thisContext, ...bindArgs) {
+    if (thisContext === null || thisContext === undefined) {
+      thisContext = globalThis;
+    } else {
+      thisContext = Object(thisContext);
+    }
+
     const fn = this;
-    return function (...callArgs) {
+    return function (...callArgs: any[]) {
       return fn.apply(thisContext, [...bindArgs, ...callArgs]);
     };
   };
@@ -13,9 +26,15 @@ if (!Function.prototype.myBind) {
 
 if (!Function.prototype.customBind) {
   Function.prototype.customBind = function (thisContext, ...bindArgs) {
+    if (thisContext === null || thisContext === undefined) {
+      thisContext = globalThis;
+    } else {
+      thisContext = Object(thisContext);
+    }
+
     const fn = this;
 
-    return function (...callArgs) {
+    return function (...callArgs: any[]) {
       thisContext = thisContext || globalThis;
       const uniqueKey = Symbol();
       thisContext[uniqueKey] = fn;
@@ -39,7 +58,11 @@ const person1 = {
   lastName: "Dhanvijay",
 };
 
-function greet(greeting, punctuation) {
+function greet(
+  this: { name: string; lastName: string },
+  greeting: string,
+  punctuation: string
+) {
   console.log(`Hello ${this.name} ${this.lastName} ${greeting} ${punctuation}`);
 }
 
