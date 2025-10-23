@@ -1,4 +1,4 @@
-import Accordion from "../components/accordian";
+import Accordion from "../../components/accordian";
 
 function AccordionExample() {
   return (
