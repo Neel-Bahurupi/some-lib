@@ -1,21 +1,16 @@
 import { classNames } from "../../utils/css";
 import css from "./index.module.css";
 import Arrow from "../../icons/arrow";
-import { useAccordionContext } from "./AccordionContext";
+import { useAccordionItemContext } from "./AccordionItem";
+import { useAccordionContext } from ".";
 
 type AccordionHeaderProps = {
-  itemId?: number;
   children?: React.ReactNode;
-  isOpen?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-function AccordionHeader({
-  itemId,
-  isOpen,
-  children,
-  ...restProps
-}: AccordionHeaderProps) {
+function AccordionHeader({ children, ...restProps }: AccordionHeaderProps) {
   const context = useAccordionContext();
+  const { itemId, isOpen } = useAccordionItemContext();
 
   return (
     <div
