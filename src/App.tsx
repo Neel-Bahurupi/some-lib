@@ -1,5 +1,11 @@
+import AccordionExample from "./examples/components/Accordion";
+
 function App() {
-  return <div>React</div>;
+  return (
+    <div>
+      <AccordionExample />
+    </div>
+  );
 }
 
 export default App;

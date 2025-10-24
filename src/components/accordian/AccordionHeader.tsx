@@ -1,8 +1,7 @@
-import { useContext } from "react";
 import { classNames } from "../../utils/css";
 import css from "./index.module.css";
 import Arrow from "../../icons/arrow";
-import AccordionContext from "./AccordionContext";
+import { useAccordionContext } from "./AccordionContext";
 
 type AccordionHeaderProps = {
   itemId?: number;
@@ -16,12 +15,7 @@ function AccordionHeader({
   children,
   ...restProps
 }: AccordionHeaderProps) {
-  const context = useContext(AccordionContext);
-  if (!context) {
-    throw new Error(
-      "AccordionHeader must be used within an Accordion component"
-    );
-  }
+  const context = useAccordionContext();
 
   return (
     <div
