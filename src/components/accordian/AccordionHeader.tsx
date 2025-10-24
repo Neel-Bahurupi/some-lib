@@ -10,7 +10,9 @@ type AccordionHeaderProps = {
 
 function AccordionHeader({ children, ...restProps }: AccordionHeaderProps) {
   const context = useAccordionContext();
-  const { itemId, isOpen } = useAccordionItemContext();
+  const { itemId } = useAccordionItemContext();
+
+  const isOpen = itemId === context?.openId ? true : false;
 
   return (
     <div

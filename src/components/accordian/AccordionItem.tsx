@@ -1,5 +1,4 @@
 import React, { createContext, useContext } from "react";
-import { useAccordionContext } from ".";
 
 type AccordionItemProps = {
   itemId: number;
@@ -8,7 +7,6 @@ type AccordionItemProps = {
 
 type AccordionContextType = {
   itemId: number;
-  isOpen: boolean;
 };
 
 const AccordionItemContext = createContext<AccordionContextType | undefined>(
@@ -27,11 +25,8 @@ function useAccordionItemContext() {
 }
 
 function AccordionItem({ itemId, children }: AccordionItemProps) {
-  const context = useAccordionContext();
-  const isOpen = itemId === context?.openId ? true : false;
-
   return (
-    <AccordionItemContext.Provider value={{ itemId, isOpen }}>
+    <AccordionItemContext.Provider value={{ itemId }}>
       {children}
     </AccordionItemContext.Provider>
   );
