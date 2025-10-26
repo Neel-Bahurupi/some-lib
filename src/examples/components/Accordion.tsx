@@ -3,7 +3,7 @@ import Accordion from "../../components/accordion";
 function AccordionExample() {
   return (
     <>
-      <Accordion style={{ width: "400px", margin: "0 auto" }}>
+      <Accordion style={{ width: "400px" }}>
         <Accordion.Item itemId={1}>
           <Accordion.Header>Header 1</Accordion.Header>
           <Accordion.Content>

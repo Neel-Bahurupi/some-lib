@@ -1,6 +1,7 @@
 import AccordionExample from "./examples/components/Accordion";
 import AlertDialogExample from "./examples/components/AlertDialog";
 import AlertDialogHookExample from "./examples/components/AlertDialogHook";
+import ButtonExample from "./examples/components/Button";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <AccordionExample />
       <AlertDialogExample />
       <AlertDialogHookExample />
+      <ButtonExample />
     </div>
   );
 }

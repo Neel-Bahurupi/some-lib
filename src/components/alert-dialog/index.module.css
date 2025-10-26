@@ -2,15 +2,12 @@
   border: none;
   border-radius: 0.8rem;
 }
-.dialog_header {
-}
 
 .dialog_header h2 {
   font-size: 1.125rem;
   margin: 0.5rem 0;
 }
-.dialog_content {
-}
+
 .dialog_footer {
   text-align: right;
 }

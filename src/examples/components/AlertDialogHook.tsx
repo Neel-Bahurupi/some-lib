@@ -1,11 +1,12 @@
 import useAlertDialog from "../../components/alert-dialog/useAlertDialog";
+import Button from "../../components/button";
 
 function AlertDialogHookExample() {
   const { open, close, AlertDialog } = useAlertDialog();
 
   return (
     <>
-      <button onClick={() => open!()}>Open</button>
+      <Button onClick={() => open!()}>Open</Button>
       <AlertDialog style={{ maxWidth: "500px" }}>
         <AlertDialog.Header>
           Are you sure you want to delete?
@@ -17,8 +18,10 @@ function AlertDialogHookExample() {
           from our servers.
         </AlertDialog.Content>
         <AlertDialog.Footer>
-          <button onClick={() => close!()}>Cancel</button>
-          <button>Continue</button>
+          <Button onClick={() => close!()} style={{ marginRight: "0.5rem" }}>
+            Cancel
+          </Button>
+          <Button variant="dark">Continue</Button>
         </AlertDialog.Footer>
       </AlertDialog>
     </>

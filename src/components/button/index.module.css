@@ -1,0 +1,55 @@
+:root {
+  --light-gray: rgb(247, 247, 247);
+  --md-light-gray: rgb(221, 221, 221);
+  --white: rgb(256, 256, 256);
+  --red: rgb(235, 33, 35);
+  --black: rgb(23, 23, 23);
+}
+
+.button {
+  background: none;
+  border: none;
+  border-radius: 0.5rem;
+}
+.button:hover {
+  cursor: pointer;
+}
+
+.outline {
+  border: 1px solid var(--md-light-gray);
+}
+.outline:hover {
+  transition: background-color 0.3s ease-out;
+  background-color: var(--light-gray);
+}
+.secondary {
+  border: 1px solid var(--light-gray);
+  background-color: var(--light-gray);
+}
+.ghost {
+  border: none;
+  background-color: var(--white);
+}
+.ghost:hover {
+  transition: background-color 0.3s ease-out;
+  background-color: var(--light-gray);
+}
+.destructive {
+  background-color: var(--red);
+  color: var(--white);
+}
+
+.dark {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.sm {
+  padding: 0.375rem 0.5rem;
+}
+.md {
+  padding: 0.5rem 1rem;
+}
+.lg {
+  padding: 0.725rem 1.125rem;
+}
