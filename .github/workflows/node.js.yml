@@ -30,6 +30,9 @@ jobs:
         with:
           node-version: 22
       - run: npm ci
+      - name: Configure GitHub Credentials
+        run: |
+          git remote set-url origin https://$GITHUB_ACTOR:${{ secrets.GITHUB_TOKEN }}@github.com/Neel-Bahurupi/some-lib.git
       - run: npm run deploy
         env:
           GIT_AUTHOR_NAME: github-actions
