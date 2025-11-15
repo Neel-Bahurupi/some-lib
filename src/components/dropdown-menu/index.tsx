@@ -3,7 +3,6 @@ import {
   useEffect,
   useRef,
   useState,
-  type HTMLAttributes,
   type ReactNode,
 } from "react";
 import css from "./index.module.css";
