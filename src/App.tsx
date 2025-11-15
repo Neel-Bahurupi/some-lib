@@ -8,6 +8,7 @@ import DropdownMenuExample from "./examples/components/DropdownMenu";
 function App() {
   return (
     <div>
+      Test
       <AccordionExample />
       <AlertDialogExample />
       <AlertDialogHookExample />
