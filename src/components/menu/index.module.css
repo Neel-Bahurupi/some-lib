@@ -1,0 +1,18 @@
+.menu {
+  border: 1px solid red;
+  display: inline-block;
+  padding: 0.3rem;
+  border: 1px solid var(--md-light-gray);
+  border-radius: 0.5rem;
+  box-shadow: 0.5px 1px 1px var(--md-light-gray);
+}
+
+.menu_item {
+  padding: 0.3rem;
+}
+
+.menu_item:hover {
+  background-color: var(--light-gray);
+  cursor: pointer;
+  border-radius: 0.3rem;
+}

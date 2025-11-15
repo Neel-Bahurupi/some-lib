@@ -3,6 +3,7 @@ import AlertDialogExample from "./examples/components/AlertDialog";
 import AlertDialogHookExample from "./examples/components/AlertDialogHook";
 import ButtonExample from "./examples/components/Button";
 import ButtonGroupExample from "./examples/components/Buttongroup";
+import DropdownMenuExample from "./examples/components/DropdownMenu";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <AccordionExample />
       <AlertDialogExample />
       <AlertDialogHookExample />
+      <DropdownMenuExample />
       <ButtonExample />
       <ButtonGroupExample />
     </div>

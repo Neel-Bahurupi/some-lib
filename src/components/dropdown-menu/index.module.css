@@ -1,0 +1,15 @@
+.dropdown_menu {
+  display: inline-block;
+}
+
+.content {
+  background-color: white;
+  position: absolute;
+  transition: display;
+  opacity: 0;
+  transition: opacity 150ms ease;
+}
+
+.content.open {
+  opacity: 1;
+}
